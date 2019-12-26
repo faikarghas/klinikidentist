@@ -1,0 +1,60 @@
+p{
+    font-size: 2.1rem;
+    @include respond(phone){
+        font-size: 18px;
+    }
+}
+
+li,a{
+    font-size: 1.6rem;
+    font-family: "FaktPro-Normal";
+}
+
+p{
+    font-family: "FaktPro-Normal";
+}
+
+h1,h2,h3,h4,h5,th,td{
+    font-family: "Brandon-grotesque-black";
+}
+
+label,button{
+    font-family: "FaktPro-Normal";
+}
+
+input{
+    font-family: "FaktPro-Normal";
+    font-size: 1.6rem;
+    padding-left: 1rem;
+    &:focus{
+        outline: none;
+    }
+}
+
+
+@font-face {
+    font-family: "Brandon-grotesque-black";
+    src:
+        url('/fonts/Brandon-grotesque-black.woff') format('woff'),
+}
+
+@font-face {
+    font-family: "FaktPro-Blond";
+    src:
+        url('/fonts/FaktPro-Blond.woff') format('woff'),
+}
+
+@font-face {
+    font-family: "FaktPro-Normal";
+    src:
+        url('/fonts/FaktPro-Normal.woff') format('woff'),
+}
+
+@font-face {
+    font-family: "FaktPro-SemiBold";
+    src:
+        url('/fonts/FaktPro-SemiBold.woff') format('woff'),
+}
+
+
+
