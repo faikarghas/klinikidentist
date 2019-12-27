@@ -68,16 +68,17 @@ function home(params) {
 
     return (
         <React.Fragment>
-        <nav className={nav ? 'nav-init' : ''}>
-            <img src="../images/identist_logo.png" width="50px" height="100%"/>
-            <ul>
-                <li><a>our services</a></li>
-                <li><a>our professionals</a></li>
-                <li><a>our clinics</a></li>
-                <li><a>contact</a></li>
-            </ul>
-        </nav>
         <header ref={ref}>
+            <nav className={nav ? 'nav-init' : ''}>
+                {/* <img src="../images/identist_logo.png" width="50px" height="100%"/> */}
+                <div></div>
+                <ul>
+                    <li><a>our services</a></li>
+                    <li><a>our professionals</a></li>
+                    <li><a>our clinics</a></li>
+                    <li><a>contact</a></li>
+                </ul>
+            </nav>
             <div className="wrapper-bg">
                 <img src="../images/bg.jpg"/>
                 <h1 className={op? 'op-init' : ''}>IDentist Family Dental Care</h1>
@@ -199,7 +200,7 @@ function home(params) {
                                         </Grid>
                                         <Grid item md={8} style={{marginBottom:'2rem'}}>
                                         <div className="box_clinics-wrap">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.56572631659!2d106.68091321449411!3d-6.320630563608754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e523c3782749%3A0x7a77f8b95dc4ac1a!2siDentist%20Golden%20Vienna%20BSD!5e0!3m2!1sen!2sid!4v1577374859236!5m2!1sen!2sid" width="600" height="450" frameborder="0" style={{border:0}} allowfullscreen=""></iframe>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.56572631659!2d106.68091321449411!3d-6.320630563608754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e523c3782749%3A0x7a77f8b95dc4ac1a!2siDentist%20Golden%20Vienna%20BSD!5e0!3m2!1sen!2sid!4v1577374859236!5m2!1sen!2sid" width="600" height="450" frameBorder="0" style={{border:0}} allowFullScreen=""></iframe>
                                         </div>
                                         </Grid>
                                         <Grid item md={8} style={{marginBottom:'2rem'}}>
