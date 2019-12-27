@@ -7,6 +7,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
+import { initGA, logPageView} from '../lib/analytics'
 
 
 import {motion, useViewportScroll, useTransform} from 'framer-motion'
@@ -63,6 +64,11 @@ function home(params) {
         }
         setHeight(ref.current.clientHeight)
         watchScroll();
+        if (!window.GA_INITIALIZED) {
+            initGA()
+            window.GA_INITIALIZED = true
+          }
+        logPageView()
         // Remove listener (like componentWillUnmount)
         return () => {
         window.removeEventListener("scroll", handleScroll);
@@ -110,7 +116,7 @@ function home(params) {
                 <section className="section_two">
                     <Container maxWidth="lg">
                         <Grid container>
-                            <Grid item md={6}>
+                            <Grid item xs={12} md={6}>
                                 <div className="box_services">
                                     <Slider ref={refSlider} {...settings}>
                                         <div className="box_services-item">
@@ -143,7 +149,7 @@ function home(params) {
                                     </Grid>
                                 </div>
                             </Grid>
-                            <Grid item md={6}>
+                            <Grid item xs={12} md={6}>
                                 <div className="introduction1">
                                     <h2>OUR SERVICES .</h2>
                                 </div>
