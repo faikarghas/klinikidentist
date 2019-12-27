@@ -6,8 +6,17 @@ import Grid from '@material-ui/core/Grid';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import {motion, useViewportScroll, useTransform} from 'framer-motion'
+import Slider from "react-slick";
 
 import '../sass/main.scss'
+
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
 
 function home(params) {
     const [trans, setTrans] = useState(0);
@@ -16,6 +25,7 @@ function home(params) {
     const [op, setOp] = useState(false)
 
     const ref = useRef(null)
+    const refSlider = useRef(null)
 
 
     function handleScroll() {
@@ -33,6 +43,14 @@ function home(params) {
         } else if (valueScroll < height * .65) {
             setNav(false)
         }
+    }
+
+    function next(params) {
+        refSlider.current.slickNext()
+    }
+
+    function prev(params) {
+        refSlider.current.slickPrev()
     }
 
     useEffect(() => {
@@ -89,16 +107,34 @@ function home(params) {
                         <Grid container>
                             <Grid item md={6}>
                                 <div className="box_services">
-                                    <h2>INVISALIGN / <br/>ORTHODONTICS</h2>
-                                    <br/>
-                                    <p>Invisalign clear braces have already led close to two millions individuals worldwide to regain full confidence in themselves by providing them with a new smile.</p>
-                                    <br/>
-                                    <Link href="#"><a className="button_link">Learn More</a></Link>
+                                    <Slider ref={refSlider} {...settings}>
+                                        <div className="box_services-item">
+                                            <h2>INVISALIGN / <br/>ORTHODONTICS</h2>
+                                            <br/>
+                                            <p>Invisalign clear braces have already led close to two millions individuals worldwide to regain full confidence in themselves by providing them with a new smile.</p>
+                                            <br/>
+                                            <Link href="#"><a className="button_link">Learn More</a></Link>
+                                        </div>
+                                        <div className="box_services-item">
+                                            <h2>SCALING / <br/> POLISHING</h2>
+                                            <br/>
+                                            <p>Invisalign clear braces have already led close to two millions individuals worldwide to regain full confidence in themselves by providing them with a new smile.</p>
+                                            <br/>
+                                            <Link href="#"><a className="button_link">Learn More</a></Link>
+                                        </div>
+                                        <div className="box_services-item">
+                                            <h2>IMPACTION / <br/> IMPACTED TOOTH EXTRACTION</h2>
+                                            <br/>
+                                            <p>Invisalign clear braces have already led close to two millions individuals worldwide to regain full confidence in themselves by providing them with a new smile.</p>
+                                            <br/>
+                                            <Link href="#"><a className="button_link">Learn More</a></Link>
+                                        </div>
+                                    </Slider>
                                 </div>
                                 <div className="button_slider">
                                     <Grid container>
-                                        <Grid item xs={6}><div className="prev"><p>Prev</p></div></Grid>
-                                        <Grid item xs={6}><div className="next"><p>Next</p></div></Grid>
+                                        <Grid item xs={6}><div className="prev" onClick={prev}><p>Prev</p></div></Grid>
+                                        <Grid item xs={6}><div className="next" onClick={next}><p>Next</p></div></Grid>
                                     </Grid>
                                 </div>
                             </Grid>
