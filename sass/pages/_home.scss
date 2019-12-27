@@ -154,7 +154,7 @@ main{
         }
 
         .section_five{
-            margin-top: 10rem;
+            padding: 2rem;
             .introduction1{
                 // background-color: lightsalmon;
                 padding: 3em;
@@ -163,6 +163,29 @@ main{
                     color: #646a73;
                     font-size: 4rem;
                     margin: 0;
+                }
+            }
+            .form_booking{
+                background-color: antiquewhite;
+                padding: 10rem;
+                form{
+                    width: 100%;
+                    .MuiTextField-root{
+                        width: 100%;
+                        margin-bottom: 2rem;
+                        .MuiInputLabel-formControl {
+                            font-size: 1.3rem;
+                        }
+                    }
+                    .form-grid{
+                        margin: 2rem;
+                    }
+                    .MuiButton-containedPrimary {
+                        background-color: #383838;
+                        padding: 1rem 4rem;
+                        font-size: 1.6rem;
+                        font-family: "FaktPro-Normal";
+                    }
                 }
             }
         }
