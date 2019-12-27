@@ -13,6 +13,8 @@ function home(params) {
     const [trans, setTrans] = useState(0);
     const [height, setHeight] = useState(0)
     const [nav, setNav] = useState(false)
+    const [op, setOp] = useState(false)
+
     const ref = useRef(null)
 
 
@@ -23,6 +25,11 @@ function home(params) {
         }
         if (valueScroll > height * .65) {
             setNav(true)
+        } else if (valueScroll > (height * .2) / 1.5) {
+            setOp(true)
+        } else if (valueScroll < (height * .65) / 1.5){
+            setOp(false)
+            setNav(false)
         } else if (valueScroll < height * .65) {
             setNav(false)
         }
@@ -55,7 +62,7 @@ function home(params) {
         <header ref={ref}>
             <div className="wrapper-bg">
                 <img src="../images/bg.jpg"/>
-                <h1>IDentist Family Dental Care</h1>
+                <h1 className={op? 'op-init' : ''}>IDentist Family Dental Care</h1>
             </div>
         </header>
         <main>
@@ -65,14 +72,13 @@ function home(params) {
                         <Grid container>
                             <Grid item md={6}>
                                 <div className="introduction1">
-                                    <h2>WE'LL GET TO <br/>THE ROOT OF<br/>ANY PROBLEM.</h2>
+                                    <h2>WE'LL GET TO <br/>THE ROOT OF<br/>ANY PROBLEM .</h2>
                                 </div>
                             </Grid>
                             <Grid item md={6}>
                                 <div className="introduction2">
                                     <p>Our philosophy, our ability to listen and our attention to detail will make your visit at the dentist an experience that is sure to live up to your expectations.</p>
                                     <br/>
-                                    {/* <Link href="#"><a className="button_services">See All Our Services</a></Link> */}
                                 </div>
                             </Grid>
                         </Grid>
@@ -98,7 +104,7 @@ function home(params) {
                             </Grid>
                             <Grid item md={6}>
                                 <div className="introduction1">
-                                    <h2>OUR SERVICES</h2>
+                                    <h2>OUR SERVICES .</h2>
                                 </div>
                             </Grid>
                         </Grid>

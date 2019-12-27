@@ -55,6 +55,11 @@ header{
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 9rem;
+            transition: 1s all;
         }
     }
+}
+
+.op-init{
+    opacity: .3;
 }
