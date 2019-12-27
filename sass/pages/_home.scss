@@ -166,7 +166,7 @@ main{
                 }
             }
             .form_booking{
-                background-color: antiquewhite;
+                background-color: #f8bc81;
                 padding: 10rem;
                 form{
                     width: 100%;
@@ -174,7 +174,14 @@ main{
                         width: 100%;
                         margin-bottom: 2rem;
                         .MuiInputLabel-formControl {
-                            font-size: 1.3rem;
+                            font-size: 1.6rem;
+                            color: white;
+                        }
+                        .MuiOutlinedInput-input {
+                            font-size: 1.6rem;
+                        }
+                        .Mui-focused{
+                            color: white;
                         }
                     }
                     .form-grid{
