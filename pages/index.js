@@ -233,21 +233,21 @@ function home(params) {
                                 <Grid item container justify="center">
                                     <Grid item xs={12} md={5} className="form-grid">
                                         <TextField
-                                            id="outlined-name"
+                                            id="dep"
                                             label="Select Departments"
                                             // value={name}
                                             // onChange={handleChange}
                                             variant="outlined"
                                         />
                                         <TextField
-                                            id="outlined-name"
+                                            id="name"
                                             label="Your Name"
                                             // value={name}
                                             // onChange={handleChange}
                                             variant="outlined"
                                         />
                                         <TextField
-                                            id="outlined-name"
+                                            id="email"
                                             label="Your Email"
                                             // value={name}
                                             // onChange={handleChange}
@@ -256,21 +256,21 @@ function home(params) {
                                     </Grid>
                                     <Grid item xs={12} md={5} className="form-grid">
                                         <TextField
-                                            id="outlined-name"
+                                            id="doctors"
                                             label="Select Doctors"
                                             // value={name}
                                             // onChange={handleChange}
                                             variant="outlined"
                                         />
                                         <TextField
-                                            id="outlined-name"
+                                            id="phone"
                                             label="Phone number"
                                             // value={name}
                                             // onChange={handleChange}
                                             variant="outlined"
                                         />
                                         <TextField
-                                            id="outlined-name"
+                                            id="date"
                                             label="DD / MM / YYYY"
                                             // value={name}
                                             // onChange={handleChange}
